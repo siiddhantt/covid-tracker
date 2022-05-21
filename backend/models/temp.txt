@@ -1,0 +1,35 @@
+{
+    ID: { type: String },
+    Message: { type: String },
+    Global: {
+        type: Object,
+    },
+    Countries: {
+        type: Array
+    },
+    Date: { type: String }
+}
+
+
+
+
+
+updated: {type : Number},
+    cases: {type : Number},
+    todayCases: {type : Number},
+    deaths: {type : Number},
+    todayDeaths: {type : Number},
+    recovered: {type : Number},
+    todayRecovered: {type : Number},
+    active: {type : Number},
+    critical: {type : Number},
+    casesPerOneMillion: {type : Number},
+    deathsPerOneMillion: {type : Number},
+    tests: {type : Number},
+    testsPerOneMillion: {type : Number},
+    population: {type : Number},
+    continent: {type : String,
+    activePerOneMillion: {type : Number},
+    recoveredPerOneMillion: {type : Number},
+    criticalPerOneMillion: {type : Number},
+    countries: {type : Array},
