@@ -9,7 +9,7 @@ function Navbar() {
         navigate('/');
     }
     return (
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800 shadow-lg">
+            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 bg-gray-800 shadow-lg">
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
                     <a href="/" className="flex items-center">
                         <img src="https://img.icons8.com/external-filled-outline-lima-studio/64/000000/external-disease-coronavirus-filled-outline-lima-studio.png" className="mr-1 h-6 sm:h-9" alt="Flowbite Logo" />
