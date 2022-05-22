@@ -6,7 +6,7 @@ function Country() {
     const { name } = state;
     const [data, setData] = useState({countryInfo:{}});
     async function getCovidData() {
-        const response = await fetch('http://localhost:5000/api/covid/countryspecific', {
+        const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/countryspecific', {
             method: 'POST',
             headers: {
                 'Accept': '*/*',

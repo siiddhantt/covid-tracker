@@ -8,7 +8,7 @@ function ChartBar(props) {
   const [updateTime, setUpdate] = useState(`21/5/2022, 9:10:55 am`);
   const [continents, setContinents] = useState([{}, {}, {}, {}, {}, {}]);
   async function getCovidData() {
-    const response = await fetch('http://localhost:5000/api/covid/continents', {
+    const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/continents', {
       method: 'GET',
       headers: {
         'Accept': '*/*',

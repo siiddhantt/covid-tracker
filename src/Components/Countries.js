@@ -5,7 +5,7 @@ import CountryList from './CountryList'
 function Countries(props) {
     const [summary, setSummary] = useState({ Countries: [] });
     async function getCountries() {
-        const response = await fetch('http://localhost:5000/api/covid/summary', {
+        const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/summary', {
             method: 'GET',
             headers: {
                 'Accept': '*/*',

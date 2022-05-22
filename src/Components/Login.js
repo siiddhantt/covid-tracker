@@ -16,11 +16,13 @@ function Login() {
             alert("Email or Password is missing!");
         }
         else {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch('https://coviid-tracker.herokuapp.com/api/auth/login/', {
                 method: 'POST',
                 headers: {
                     'Accept': '*/*',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': '*',
                 },
                 body: JSON.stringify({ email: `${email}`, password: `${pass}` })
             });
