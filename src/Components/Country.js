@@ -9,6 +9,7 @@ function Country() {
     const { state } = useLocation();
     const { name } = state;
     const [data, setData] = useState({ countryInfo: {} });
+    const [clickk, setClick] = useState(0);
     async function getCovidData() {
         const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/countryspecific', {
             method: 'POST',
@@ -29,6 +30,9 @@ function Country() {
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedDate1, setSelectedDate1] = useState(null);
     console.log(new Date(selectedDate))
+    const handleClick =(e)=>{
+        setClick(clickk+1);
+    }
     return (
         <>
             <div className='bg-gradient-to-r from-sky-400 via-sky-200 to-cyan-100 text-center'>
@@ -107,9 +111,10 @@ function Country() {
                     <DatePicker selected={selectedDate1} onChange={date => setSelectedDate1(date) } dateFormat='MM/dd/yy' minDate={new Date()} maxDate={new Date()}/>
                 </div>
                 </div>
+                <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-1 mt-6 text-center mr-3 md:mr-0 hover:bg-blue-700 focus:ring-blue-800 shadow-xl" onClick={handleClick}>Submit</button>
             </div>
             <div>
-                <LastDays name={data.country} iniDate={selectedDate} finDate={selectedDate1}/>
+                <LastDays name={data.country} iniDate={selectedDate} finDate={selectedDate1} clickk={clickk}/>
             </div>
         </>
     )

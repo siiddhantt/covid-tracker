@@ -5,6 +5,7 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Countries from './Components/Countries';
 import Country from './Components/Country';
+import Footer from './Components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

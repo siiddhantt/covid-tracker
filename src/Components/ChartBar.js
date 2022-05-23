@@ -27,8 +27,8 @@ function ChartBar(props) {
   }, []);
   return (
     <>
-    <h1 className='text-center'>Data by Continents</h1>
-    <h1 className='text-center'>(Updated at {updateTime}) </h1>
+    <h1 className='text-xl underline font-bold text-center'>Data by Continents</h1>
+    <h1 className='text-slate-600 text-center'>(Updated at {updateTime}) </h1>
     <div>
     <Bar
       data={{

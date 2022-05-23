@@ -26,7 +26,7 @@ function Landing_Page() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <a className="block w-full px-12 py-3 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded sm:w-auto active:text-opacity-75 hover:bg-transparent hover:text-white focus:outline-none focus:ring" href="https://hn.algolia.com/api">
+              <a className="block w-full px-12 py-3 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded sm:w-auto active:text-opacity-75 hover:bg-transparent hover:text-white focus:outline-none focus:ring" href="https://documenter.getpostman.com/view/11144369/Szf6Z9B3?version=latest">
                 API Documentation
               </a>
 

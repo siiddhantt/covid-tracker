@@ -4,7 +4,7 @@ import DaysBar from './DaysBar';
 function LastDays(props) {
   let iniDate = props.iniDate;
   let finDate = props.finDate;
-  let n = Math.floor((finDate - iniDate) / (1000 * 60 * 60 * 24));
+  let n = 1;
   const [lst, setLst] = useState([]);
   const [lst1, setLst1] = useState([]);
   const [covdata, setCovData] = useState({ cases: {}, deaths: {} });
@@ -12,6 +12,7 @@ function LastDays(props) {
     return new Promise(resolve => { resolve() })
   }
   async function getData() {
+    n = Math.floor((finDate - iniDate) / (1000 * 60 * 60 * 24));
     const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/countrylastdays', {
       method: 'POST',
       headers: {
@@ -38,10 +39,7 @@ function LastDays(props) {
   }
   useEffect(() => {
     getData();
-  }, []);
-  useEffect(() => {
-    getData();
-  }, [iniDate, finDate]);
+  }, [iniDate, finDate, n, props.clickk]);
   return (
     <div>
       <DaysBar cases={lst} deaths={lst1} />

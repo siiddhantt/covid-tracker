@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Bar } from 'react-chartjs-2';
-import { Line } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
 
 function DaysBar(props) {
     const arbitraryStackKey = "stack1";
-    const [datesArr, setDatesArr] = useState([]);
-    useEffect(() => {
-        const tmp = props.cases.map(element => Object.keys(element));
-        setDatesArr(tmp);
-    }, [props.cases]);
+    // const [datesArr, setDatesArr] = useState([]);
+    // useEffect(() => {
+    //     const tmp = props.cases.map(element => Object.keys(element));
+    //     setDatesArr(tmp);
+    // }, [props.cases]);
+    const datesArr = props.cases.map(element => Object.keys(element));
     const casesArr = props.cases.map(element => Object.values(element)[0]);
     const deathsArr = props.deaths.map(element => Object.values(element)[0]);
     return (
