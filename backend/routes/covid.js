@@ -37,8 +37,8 @@ router.get('/countrydate', async (req, res) => {
     }
 });
 
-// Get covid data for particular country in last n days: GET 'api/covid/countrylastdays'.
-router.get('/countrylastdays', async (req, res) => {
+// Get covid data for particular country in last n days: POST 'api/covid/countrylastdays'.
+router.post('/countrylastdays', async (req, res) => {
     try {
         let response = await axios.get(`https://corona.lmao.ninja/v2/historical/${req.body.country}?lastdays=${req.body.lastdays}`);
         let dataGot = await response.data;
