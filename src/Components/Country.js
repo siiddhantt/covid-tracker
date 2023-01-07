@@ -11,7 +11,7 @@ function Country() {
     const [data, setData] = useState({ countryInfo: {} });
     const [clickk, setClick] = useState(0);
     async function getCovidData() {
-        const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/countryspecific', {
+        const response = await fetch(`${process.env.APP_HOST}/api/covid/countryspecific`, {
             method: 'POST',
             headers: {
                 'Accept': '*/*',
@@ -30,8 +30,8 @@ function Country() {
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedDate1, setSelectedDate1] = useState(null);
     console.log(new Date(selectedDate))
-    const handleClick =(e)=>{
-        setClick(clickk+1);
+    const handleClick = (e) => {
+        setClick(clickk + 1);
     }
     return (
         <>
@@ -100,21 +100,21 @@ function Country() {
             </div>
             <div className='flex justify-center items-center gap-2 border-sky-200 rounded bg-sky-800'>
                 <div className='py-2'>
-                <h1 className='text-center text-white font-bold'>Initial date</h1>
-                <div className="flex justify-center items-center rounded">
-                    <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)} dateFormat='MM/dd/yy'minDate={new Date(new Date().setDate(new Date().getDate() - 30))} maxDate={new Date()}/>
-                </div>
+                    <h1 className='text-center text-white font-bold'>Initial date</h1>
+                    <div className="flex justify-center items-center rounded">
+                        <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)} dateFormat='MM/dd/yy' minDate={new Date(new Date().setDate(new Date().getDate() - 30))} maxDate={new Date()} />
+                    </div>
                 </div>
                 <div className='py-2'>
-                <h1 className='text-center text-white font-bold'>Final date</h1>
-                <div className="flex justify-center items-center rounded">
-                    <DatePicker selected={selectedDate1} onChange={date => setSelectedDate1(date) } dateFormat='MM/dd/yy' minDate={new Date()} maxDate={new Date()}/>
-                </div>
+                    <h1 className='text-center text-white font-bold'>Final date</h1>
+                    <div className="flex justify-center items-center rounded">
+                        <DatePicker selected={selectedDate1} onChange={date => setSelectedDate1(date)} dateFormat='MM/dd/yy' minDate={new Date()} maxDate={new Date()} />
+                    </div>
                 </div>
                 <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-1 mt-6 text-center mr-3 md:mr-0 hover:bg-blue-700 focus:ring-blue-800 shadow-xl" onClick={handleClick}>Submit</button>
             </div>
             <div>
-                <LastDays name={data.country} iniDate={selectedDate} finDate={selectedDate1} clickk={clickk}/>
+                <LastDays name={data.country} iniDate={selectedDate} finDate={selectedDate1} clickk={clickk} />
             </div>
         </>
     )

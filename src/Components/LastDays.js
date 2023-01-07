@@ -13,7 +13,7 @@ function LastDays(props) {
   }
   async function getData() {
     n = Math.floor((finDate - iniDate) / (1000 * 60 * 60 * 24));
-    const response = await fetch('https://coviid-tracker.herokuapp.com/api/covid/countrylastdays', {
+    const response = await fetch(`${process.env.APP_HOST}/api/covid/countrylastdays`, {
       method: 'POST',
       headers: {
         'Accept': '*/*',

@@ -17,7 +17,7 @@ function Signup() {
             alert("One or more fields are empty!");
         }
         else {
-            const response = await fetch('https://coviid-tracker.herokuapp.com/api/auth/createuser', {
+            const response = await fetch(`${process.env.APP_HOST}/api/auth/createuser`, {
                 method: 'POST',
                 headers: {
                     'Accept': '*/*',
