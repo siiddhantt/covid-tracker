@@ -11,7 +11,7 @@ function Country() {
     const [data, setData] = useState({ countryInfo: {} });
     const [clickk, setClick] = useState(0);
     async function getCovidData() {
-        const response = await fetch(`${process.env.APP_HOST}/api/covid/countryspecific`, {
+        const response = await fetch(`${process.env.REACT_APP_HOST}/api/covid/countryspecific`, {
             method: 'POST',
             headers: {
                 'Accept': '*/*',

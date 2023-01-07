@@ -8,7 +8,7 @@ function ChartBar(props) {
   const [updateTime, setUpdate] = useState(`21/5/2022, 9:10:55 am`);
   const [continents, setContinents] = useState([{}, {}, {}, {}, {}, {}]);
   async function getCovidData() {
-    const response = await fetch(`${process.env.APP_HOST}/api/covid/continents`, {
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/covid/continents`, {
       method: 'GET',
       headers: {
         'Accept': '*/*',

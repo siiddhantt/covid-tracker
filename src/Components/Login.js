@@ -16,7 +16,7 @@ function Login() {
             alert("Email or Password is missing!");
         }
         else {
-            const response = await fetch(`${process.env.APP_HOST}/api/auth/login/`, {
+            const response = await fetch(`${process.env.REACT_APP_HOST}/api/auth/login/`, {
                 method: 'POST',
                 headers: {
                     'Accept': '*/*',

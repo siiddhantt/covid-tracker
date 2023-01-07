@@ -5,7 +5,7 @@ import CountryList from './CountryList'
 function Countries(props) {
     const [summary, setSummary] = useState({ Countries: [] });
     async function getCountries() {
-        const response = await fetch(`${process.env.APP_HOST}/api/covid/summary`, {
+        const response = await fetch(`${process.env.REACT_APP_HOST}/api/covid/summary`, {
             method: 'GET',
             headers: {
                 'Accept': '*/*',
