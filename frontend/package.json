@@ -18,7 +18,7 @@
     "@date-io/date-fns": "^3.0.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.20",
+    "@mui/material": "^5.15.21",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
